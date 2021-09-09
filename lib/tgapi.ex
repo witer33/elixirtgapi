@@ -5,7 +5,7 @@ defmodule Tgapi do
   """
 
   @doc """
-  Tgapi is a Telegram Bot API framework.
+  you should use this to call Telegram methods.
   """
 
 

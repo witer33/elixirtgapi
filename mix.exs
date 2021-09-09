@@ -7,7 +7,9 @@ defmodule Tgapi.MixProject do
       version: "0.1.0",
       elixir: "~> 1.12",
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      deps: deps(),
+      description: "Telegram Bot API Framework wrote in Elixir to provide a lightweight and solid system to avoid any crash.",
+      package: package()
     ]
   end
 
@@ -22,12 +24,18 @@ defmodule Tgapi.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      # {:dep_from_hexpm, "~> 0.3.0"},
-      # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"}
       {:httpoison, "~> 1.8"},
       {:tesla, "~> 1.4"},
       {:hackney, "~> 1.13"},
-      {:json, "~> 1.4"}
+      {:json, "~> 1.4"},
+      {:ex_doc, ">= 0.0.0", only: :dev, runtime: false}
+    ]
+  end
+
+  defp package() do
+    [
+      licenses: ["GPL-3.0-only"],
+      links: %{"GitHub" => "https://github.com/witer33/elixirtgapi"}
     ]
   end
 end
