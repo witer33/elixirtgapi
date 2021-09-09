@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="nimble_options" type="mix">
+    <CLASSES />
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/deps/nimble_options/lib" />
+      <root url="file://$PROJECT_DIR$/deps/nimble_options/lib" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="mint" type="mix">
+    <CLASSES />
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/deps/mint/lib" />
+      <root url="file://$PROJECT_DIR$/deps/mint/src" />
+      <root url="file://$PROJECT_DIR$/deps/mint/lib" />
+      <root url="file://$PROJECT_DIR$/deps/mint/src" />
+    </SOURCES>
+  </library>
+</component>

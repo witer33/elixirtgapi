@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="castore" type="mix">
+    <CLASSES />
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/deps/castore/lib" />
+      <root url="file://$PROJECT_DIR$/deps/castore/priv" />
+      <root url="file://$PROJECT_DIR$/deps/castore/lib" />
+      <root url="file://$PROJECT_DIR$/deps/castore/priv" />
+    </SOURCES>
+  </library>
+</component>
