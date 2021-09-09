@@ -8,7 +8,7 @@ defmodule Tgapi.MixProject do
       elixir: "~> 1.12",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
-      description: "Telegram Bot API Framework wrote in Elixir to provide a lightweight and solid system to avoid any crash.",
+      description: "Efficient, concurrent and lightweight Telegram Bot API framework written in Elixir",
       package: package()
     ]
   end
