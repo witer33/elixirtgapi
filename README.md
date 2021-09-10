@@ -40,13 +40,23 @@ end)
 Process.sleep(:infinity)
 ```
 
+### Telegram method call
+
+Tgapi.client(token).(:method).(params)
+
+#### Example
+
+```elixir
+Tgapi.client("123456789:d2FpdCB3aHkgZGlkIHlvdSBkZWNvZGU").(:sendMessage).(chat_id: -348924427, text: "how are you?")
+```
+
 ## Storage system
 
 ### PUT
 
 Tgapi.Session.put(Tgapi.BotSession, key, value)
 
-### Example
+#### Example
 
 ```elixir
 Tgapi.Session.put(Tgapi.BotSession, :name, "Alex")
@@ -56,7 +66,7 @@ Tgapi.Session.put(Tgapi.BotSession, :name, "Alex")
 
 Tgapi.Session.get(Tgapi.BotSession, key)
 
-### Example
+#### Example
 
 ```elixir
 name = Tgapi.Session.get(Tgapi.BotSession, :name)
@@ -65,7 +75,7 @@ name = Tgapi.Session.get(Tgapi.BotSession, :name)
 
 Tgapi.Session.delete(Tgapi.BotSession, key)
 
-### Example
+#### Example
 
 ```elixir
 Tgapi.Session.delete(Tgapi.BotSession, :name)
