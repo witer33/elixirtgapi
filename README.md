@@ -24,10 +24,15 @@ botClient = Tgapi.client(token)
 Tgapi.start(token, fn update ->
   case update do
     %{"message" => %{"text" => "/start"}} -> 
-      botClient.(:sendMessage).(chat_id: update["message"]["chat"]["id"], text: "helo",
-                              reply_markup: Tgapi.inline_keyboard([[%{text: "hey", callback_data: "nice"}]]))
+      botClient.(:sendMessage).(
+        chat_id: update["message"]["chat"]["id"],
+        text: "helo",
+        reply_markup: Tgapi.inline_keyboard([[%{text: "hey", callback_data: "nice"}]])
+      )
+    
     %{"message" => %{"text" => _}} -> 
       botClient.(:sendMessage).(chat_id: update["message"]["chat"]["id"], text: "?")
+    
     _ -> nil
   end
 end)
