@@ -61,3 +61,12 @@ Tgapi.Session.get(Tgapi.BotSession, key)
 ```elixir
 name = Tgapi.Session.get(Tgapi.BotSession, :name)
 ```
+### GET
+
+Tgapi.Session.delete(Tgapi.BotSession, key)
+
+### Example
+
+```elixir
+Tgapi.Session.delete(Tgapi.BotSession, :name)
+```
