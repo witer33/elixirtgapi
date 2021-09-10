@@ -10,7 +10,7 @@ by adding `tgapi` to your list of dependencies in `mix.exs`:
 ```elixir
 def deps do
   [
-    {:tgapi, "~> 0.1.0"}
+    {:tgapi, "~> 0.2.0"}
   ]
 end
 ```
@@ -21,7 +21,7 @@ end
 token = "TOKEN"
 botClient = Tgapi.client(token)
 
-Tgapi.handle(token, fn update ->
+Tgapi.start(token, fn update ->
   case update do
     %{"message" => %{"text" => "/start"}} -> 
       botClient.(:sendMessage).(chat_id: update["message"]["chat"]["id"], text: "helo",
@@ -31,4 +31,28 @@ Tgapi.handle(token, fn update ->
     _ -> nil
   end
 end)
+
+Process.sleep(:infinity)
+```
+
+## Storage system
+
+### PUT
+
+Tgapi.Session.put(Tgapi.BotSession, key, value)
+
+### Example
+
+```elixir
+Tgapi.Session.put(Tgapi.BotSession, :name, "Alex")
+```
+
+### GET
+
+Tgapi.Session.get(Tgapi.BotSession, key)
+
+### Example
+
+```elixir
+name = Tgapi.Session.get(Tgapi.BotSession, :name)
 ```
