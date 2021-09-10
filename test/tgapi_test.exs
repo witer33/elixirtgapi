@@ -4,7 +4,7 @@ defmodule TgapiTest do
   @moduletag timeout: :infinity
 
   setup do
-    token = "1275427866:AAHZsTg2d3lJS1mNxH0BpU9UxzA6x6LLIF8"
+    token = "TOKEN"
 
     %{token: token}
   end
