@@ -8,7 +8,8 @@ defmodule Tgapi.MixProject do
       elixir: "~> 1.12",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
-      description: "Efficient, concurrent and lightweight Telegram Bot API framework written in Elixir",
+      description:
+        "Efficient, concurrent and lightweight Telegram Bot API framework written in Elixir",
       package: package()
     ]
   end
@@ -17,14 +18,13 @@ defmodule Tgapi.MixProject do
   def application do
     [
       extra_applications: [:logger],
-      applications: [:httpoison, :json, :tesla]
+      applications: [:json, :tesla, :hackney]
     ]
   end
 
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:httpoison, "~> 1.8"},
       {:tesla, "~> 1.4"},
       {:hackney, "~> 1.13"},
       {:json, "~> 1.4"},
