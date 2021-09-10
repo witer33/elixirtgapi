@@ -47,7 +47,10 @@ Tgapi.client(token).(:method).(params)
 #### Example
 
 ```elixir
-Tgapi.client("123456789:d2FpdCB3aHkgZGlkIHlvdSBkZWNvZGU").(:sendMessage).(chat_id: -348924427, text: "how are you?")
+Tgapi.client("123456789:d2FpdCB3aHkgZGlkIHlvdSBkZWNvZGU").(:sendMessage).(
+  chat_id: -348924427,
+  text: "how are you?"
+)
 ```
 
 ## Storage system
