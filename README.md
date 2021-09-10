@@ -57,29 +57,29 @@ Tgapi.client("123456789:d2FpdCB3aHkgZGlkIHlvdSBkZWNvZGU").(:sendMessage).(
 
 ### PUT
 
-Tgapi.Session.put(Tgapi.BotSession, key, value)
+Tgapi.Session.put(key, value)
 
 #### Example
 
 ```elixir
-Tgapi.Session.put(Tgapi.BotSession, :name, "Alex")
+Tgapi.Session.put(:name, "Alex")
 ```
 
 ### GET
 
-Tgapi.Session.get(Tgapi.BotSession, key)
+Tgapi.Session.get(key)
 
 #### Example
 
 ```elixir
-name = Tgapi.Session.get(Tgapi.BotSession, :name)
+name = Tgapi.Session.get(:name)
 ```
 ### DELETE
 
-Tgapi.Session.delete(Tgapi.BotSession, key)
+Tgapi.Session.delete(key)
 
 #### Example
 
 ```elixir
-Tgapi.Session.delete(Tgapi.BotSession, :name)
+Tgapi.Session.delete(:name)
 ```

@@ -4,7 +4,7 @@ defmodule TgapiTest do
   @moduletag timeout: :infinity
 
   setup do
-    token = "TOKEN"
+    token = "1275427866:AAF4fTKYlPIVYk9yTTkLlnbdDJLmc-OdroA"
 
     %{token: token}
   end
@@ -53,8 +53,8 @@ defmodule TgapiTest do
     Tgapi.start(token, fn update ->
       case update do
         %{"message" => %{"text" => text}} ->
-          previous_text = Tgapi.Session.get(Tgapi.BotSession, :previous_text)
-          Tgapi.Session.put(Tgapi.BotSession, :previous_text, text)
+          previous_text = Tgapi.Session.get(:previous_text)
+          Tgapi.Session.put(:previous_text, text)
           botClient.(:sendMessage).(chat_id: update["message"]["chat"]["id"], text: "prev text #{previous_text}")
 
         _ ->

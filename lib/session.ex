@@ -5,16 +5,16 @@ defmodule Tgapi.Session do
     GenServer.start_link(__MODULE__, %{}, name: name)
   end
 
-  def put(pid, key, value) do
-    GenServer.cast(pid, {:put, key, value})
+  def put(key, value) do
+    GenServer.cast(Tgapi.BotSession, {:put, key, value})
   end
 
-  def get(pid, key) do
-    GenServer.call(pid, {:get, key})
+  def get(key) do
+    GenServer.call(Tgapi.BotSession, {:get, key})
   end
 
-  def delete(pid, key) do
-    GenServer.cast(pid, {:delete, key})
+  def delete(key) do
+    GenServer.cast(Tgapi.BotSession, {:delete, key})
   end
 
   @impl true
